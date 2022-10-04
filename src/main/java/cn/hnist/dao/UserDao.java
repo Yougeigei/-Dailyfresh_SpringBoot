@@ -20,7 +20,7 @@ public interface UserDao {
      * 根据用户名查询用户信息
      */
     @Select("select * from user where username=#{username}")
-    User findByUsername(String username);
+    User findByUsername(@Param("username") String username);
 
     /**
      * 保存用户
@@ -45,7 +45,7 @@ public interface UserDao {
      * 通过用户名和密码查询用户
      */
     @Select("select * from user where username=#{arg0} and password=#{arg1};")
-    User findByNameAndPwd(String username, String password);
+    User findByNameAndPwd(@Param("arg0") String username, @Param("arg1") String password);
 
     /**
      * 根据用户id查询用户

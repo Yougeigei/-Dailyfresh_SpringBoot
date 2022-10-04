@@ -8,6 +8,7 @@ import cn.hnist.service.UserService;
 import cn.hnist.utils.MailUtils;
 import cn.hnist.utils.Md5Util;
 import cn.hnist.utils.UuidUtil;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

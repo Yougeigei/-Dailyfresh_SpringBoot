@@ -60,7 +60,7 @@ public interface AdminDao {
      * @return : 查询到的用户对象
      */
     @Select("select * from user where username=#{arg0} and password=#{arg1};")
-    User findUserByNameAndPwd(String username, String password);
+    User findUserByNameAndPwd(@Param("username") String username, @Param("password") String password);
 
     /**
      * 添加用户
