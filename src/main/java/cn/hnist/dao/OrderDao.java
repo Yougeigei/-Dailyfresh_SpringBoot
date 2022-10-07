@@ -38,7 +38,7 @@ public interface OrderDao {
     /**
      * 根据user id 查询order_info内容
      */
-    @Select("select * from order_info where user_id=#{id}")
+    @Select("select * from order_info where user_id=#{id} order by order_id desc")
     List<OrderInfo> findOrderInfoByUserId(Integer id);
 
     /**

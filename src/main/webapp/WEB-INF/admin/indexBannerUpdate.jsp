@@ -63,7 +63,7 @@
 
     <div class="form-group">
       <label>展示顺序：</label>
-      <input type="text" class="form-control" value="${banner.od}" name="od"/>
+      <input type="text" class="form-control" value="${banner.index}" name="index"/>
     </div>
 
     <div class="form-group">

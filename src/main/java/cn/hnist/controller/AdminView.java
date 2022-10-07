@@ -297,4 +297,18 @@ public class AdminView {
 
         request.getRequestDispatcher("/WEB-INF/admin/picUpload.jsp").forward(request, response);
     }
+
+    /*
+     * 数据分析页面
+     */
+    @RequestMapping("/mr_result")
+    public void mrResult(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        List<Result> resultList = adminService.findAllResult();
+
+        request.setAttribute("resultList", resultList);
+
+        request.getRequestDispatcher("/WEB-INF/admin/mr_result.jsp").forward(request, response);
+    }
 }

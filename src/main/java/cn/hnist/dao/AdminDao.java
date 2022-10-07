@@ -1,6 +1,7 @@
 package cn.hnist.dao;
 
 import cn.hnist.pojo.*;
+import cn.hnist.pojo.Result;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
@@ -32,7 +33,7 @@ public interface AdminDao {
      * @return : 结果集
      */
     @Select("select * from user where is_delete='N' limit #{arg0},#{arg1}")
-    List<User> findUserByPage(Integer start, Integer rows);
+    List<User> findUserByPage(@Param("arg0") Integer start, @Param("arg1") Integer rows);
 
     /**
      * 根据用户名查询用户
@@ -60,7 +61,7 @@ public interface AdminDao {
      * @return : 查询到的用户对象
      */
     @Select("select * from user where username=#{arg0} and password=#{arg1};")
-    User findUserByNameAndPwd(@Param("username") String username, @Param("password") String password);
+    User findUserByNameAndPwd(@Param("arg0") String username, @Param("arg1") String password);
 
     /**
      * 添加用户
@@ -164,7 +165,7 @@ public interface AdminDao {
      * 分页查询goods表
      */
     @Select("select * from goods limit #{arg0},#{arg1}")
-    List<Goods> findGoodsByPage(int start, Integer rows);
+    List<Goods> findGoodsByPage(@Param("arg0") int start, @Param("arg1") Integer rows);
 
     /**
      * 查询goods 表总记录数
@@ -218,7 +219,7 @@ public interface AdminDao {
     /**
      * 更新index_banner表内容
      */
-    @Select("update index_banner set image=#{image},od=#{od} where id=#{id}")
+    @Select("update index_banner set image=#{image},`index`=#{index} where id=#{id}")
     void updateIndexGoodsBanner(IndexGoodsBanner indexGoodsBanner);
 
     /**
@@ -230,6 +231,12 @@ public interface AdminDao {
     /**
      * 添加index_banner
      */
-    @Insert("insert into index_banner(image, od, sku_id) VALUES(#{image},#{od},#{sku_id})")
+    @Insert("insert into index_banner(image, index, sku_id) VALUES(#{image},#{index},#{sku_id})")
     void addIndexGoodsBanner(IndexGoodsBanner banner);
+
+    /**
+     * 查询分析数据
+     */
+    @Select("select * from mr_result")
+    List<Result> findAllResult();
 }

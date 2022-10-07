@@ -32,8 +32,8 @@ public class IndexGoodsBanner implements Serializable {
         return index;
     }
 
-    public void setOd(Integer od) {
-        this.index = od;
+    public void setIndex(Integer index) {
+        this.index = index;
     }
 
     public Integer getSku_id() {

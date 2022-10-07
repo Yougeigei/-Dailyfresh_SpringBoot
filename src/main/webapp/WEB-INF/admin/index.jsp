@@ -42,6 +42,8 @@
      href="${pageContext.request.contextPath}/admin/goods/list">商品表管理</a>
   <a class="btn btn-success btn-lg btn-block"
      href="${pageContext.request.contextPath}/admin/indexBanner/list">首页轮播图</a>
+  <a class="btn btn-success btn-lg btn-block"
+     href="${pageContext.request.contextPath}/admin/mr_result">数据分析</a>
 </div>
 </body>
 </html>

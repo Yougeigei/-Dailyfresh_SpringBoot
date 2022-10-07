@@ -367,4 +367,9 @@ public class AdminServiceImpl implements AdminService {
 
         return info;
     }
+
+    @Override
+    public List<Result> findAllResult() {
+        return adminDao.findAllResult();
+    }
 }

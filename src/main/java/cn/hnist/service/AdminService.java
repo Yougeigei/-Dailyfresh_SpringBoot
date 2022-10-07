@@ -156,4 +156,8 @@ public interface AdminService {
      */
     ResultInfo saveIndexBanner(IndexGoodsBanner banner);
 
+    /**
+     * 查询分析数据
+     */
+    List<Result> findAllResult();
 }

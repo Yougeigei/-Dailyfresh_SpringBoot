@@ -65,7 +65,7 @@
     <c:forEach items="${banner_list}" var="banner">
       <tr style="height: 108px;">
         <td><img src="${banner.image}" width="304px" height="108px"/></td>
-        <td style="line-height: 108px">${banner.od}</td>
+        <td style="line-height: 108px">${banner.index}</td>
         <td style="line-height: 108px">
           <a class="btn btn-default btn-sm"
              href="${pageContext.request.contextPath}/admin/indexBanner/update/${banner.id}">修改</a>

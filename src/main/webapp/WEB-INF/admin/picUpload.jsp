@@ -36,7 +36,7 @@
 
 <div class="container" style="width: 400px;margin-top: 50px;">
 
-  <form action="http://47.107.251.224/upload" enctype="multipart/form-data" method="post">
+  <form action="http://127.0.0.1:36677" enctype="multipart/form-data" method="post">
     <div class="form-group">
       <label for="picture">请选择文件：</label>
       <input type="file" name="pic" id="picture"/>
