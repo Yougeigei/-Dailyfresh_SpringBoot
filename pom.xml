@@ -173,7 +173,7 @@
                 <filtering>false</filtering>
             </resource>
             <resource>
-                <directory>src/main/webapp</directory>
+                <directory>src/main/resources/webapp</directory>
                 <targetPath>META-INF/resources</targetPath>
                 <includes>
                     <include>**/*.*</include>

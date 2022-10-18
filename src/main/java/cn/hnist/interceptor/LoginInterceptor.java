@@ -1,5 +1,6 @@
 package cn.hnist.interceptor;
 
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -9,6 +10,7 @@ import javax.servlet.http.HttpSession;
 /**
  * 拦截器，该拦截器拦截/user/* 的内容
  */
+@Component
 public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
@@ -25,6 +27,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         // 获取session
         HttpSession session = request.getSession();
         Object user = session.getAttribute("user");
+
         // 用户已登录则放行
         if (user != null)
             return true;
