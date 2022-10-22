@@ -896,7 +896,7 @@ html, body {
 .login_banner {
   width: 381px;
   height: 322px;
-  background: url(/images/login_banner.png) no-repeat;
+  background: url(http://mp-ttsx-python.itheima.net/static/images/login_banner.png) no-repeat;
   margin-top: 90px;
 }
 
@@ -1056,7 +1056,7 @@ html, body {
 .reg_banner {
   width: 251px;
   height: 329px;
-  background: url(/images/register_banner.png) no-repeat;
+  background: url(http://mp-ttsx-python.itheima.net/static/images/register_banner.png) no-repeat;
   float: right;
   margin: 20px 10px 0 0;
   opacity: 0.5
