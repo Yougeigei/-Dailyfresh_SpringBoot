@@ -1,4 +1,3 @@
-# Dailyfresh_SpringBoot
 # DailyFresh(天天生鲜Java Springboot电商项目)
 天天生鲜是Python中Django框架的一个经典案例，现将其用java的SSM框架实现
 包含了数据库文件，本项目需要用到redis存储用户浏览记录和购物车
